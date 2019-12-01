@@ -1,0 +1,15 @@
+-- //Database Name - banglatourbd
+
+DROP TABLE IF EXISTS `slider`;
+
+CREATE TABLE `slider` (
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL UNIQUE KEY,
+  `description` LONGTEXT NOT NULL,
+  `image_path` varchar(250) NOT NULL,
+  `status` int(1) NOT NULL DEFAULT 1  
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `slider` VALUES (NULL, 'The Sundarbans', 'About Sundarban Forest', 'uploads/slider/no1.jpg', '1');
+INSERT INTO `slider` VALUES (NULL, 'Shat Gambuz Mosque', 'About Shat Gambuz Mosque', 'uploads/slider/no2.jpg', '0');
+INSERT INTO `slider` VALUES (NULL, 'Khulna City', 'About Khulna City', 'uploads/slider/no3.jpg', '1');
